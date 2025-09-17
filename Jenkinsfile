@@ -6,12 +6,6 @@ pipeline {
     }
 
     stages {
-        stage('Clonar repositorio') {
-            steps {
-                git 'https://github.com/cesarasdf/spring-hola-mundo.git'
-            }
-        }
-
         stage('Compilar Maven') {
             steps {
                 sh './mvnw clean package -DskipTests'
