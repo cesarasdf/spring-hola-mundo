@@ -8,6 +8,7 @@ pipeline {
     stages {
         stage('Compilar Maven') {
             steps {
+				sh 'chmod +x mvnw'
                 sh './mvnw clean package -DskipTests'
             }
         }
